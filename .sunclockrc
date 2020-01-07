@@ -1,0 +1,72 @@
+### ~/.sunclockrc on latest Debian
+###
+### created: 2020-Jan-03
+### updated: never
+###
+### man sunclock
+###
+###=================================================================
+### The more common settings are up top here.
+addcity 2|----------You_are_here|39.960|-75.170|US/Eastern
+addcity 2|----------You_should_be_here|20.700|-156.400|US/Hawaiian
+###
+aspect 1
+bottomline
+### city works from commandline but not rc.  Why?
+#city Philadelphia
+citycategories 5
+#citycheck
+citymode 1
+clockgeom 400x200+100+775
+colorlevel 3
+#dateformat %H:%M%_%a%_%d%_%b%_%y|%H:%M:%S%_%Z|%a%_%j/%t%_%U/52
+darkness 0.85
+fillmode 2
+language: en
+mapmode E
+mapgeom 1200x600
+meridianmode 3
+meridianspacing 75
+moon
+noanimation
+noscreensaver
+parallelmode 0
+position 39.960|-75.170
+setcolor city1|#00FFFF
+setcolor cityname|#775555
+setcolor mark1|Green
+setcolor mark2|Yellow
+shading 4
+sun
+tropics
+vmfflags 2
+zoomsync
+###=================================================================
+###
+### Where to center the map (dx,dy) and how much to zoom in (100)
+###
+dx -75.1
+dy 39.9
+mag 2.0
+#mag 100
+###=================================================================
+###
+### which world view to show: clock or map
+###
+map
+###=================================================================
+###
+### which additional windows to show:
+###     menu or nomenu
+###     option or nooption
+###     urban or nourban
+###     zoom or nozoom
+###
+nomenu
+nooption
+#noselector
+nourban
+zoom
+###=================================================================
+###
+#EOF
