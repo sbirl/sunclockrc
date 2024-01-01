@@ -1,6 +1,6 @@
 ###
 ### created: 2020-Jan-03
-### updated: never
+### updated: 2024-Jan-01  Happy New Year!
 ###
 ### man sunclock
 ###
@@ -13,9 +13,11 @@ aspect 0
 bottomline
 #city Philadelphia
 citymode 0
+classname sunclock-mini
 colorlevel 3
 darkness 0.85
 fillmode 2
+#fixedrootpos
 language: en
 map
 mapgeom 450x225
@@ -27,14 +29,14 @@ moon
 parallelmode 0
 position 39.960|-75.170
 ### Lower right: rootdx of 1 and rootdy of 0.9
-rootdx 1.00
-rootdy 0.90
+#rootdx 1.00
+#rootdy 0.90
 rootperiod 120
 setcolor mapstripbg|White
 setcolor mark1|green
 setcolor root|Black
 setcolor star|Black
-screensaver
+#screensaver
 shading 4
 sun
 tropics
