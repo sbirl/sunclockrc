@@ -1,7 +1,7 @@
 ### ~/.sunclockrc on latest Debian
 ###
 ### created: 2020-Jan-03
-### updated: never
+### updated: 2024-Jan-01  Happy New Year!
 ###
 ### man sunclock
 ###
@@ -36,6 +36,7 @@ setcolor city1|#00FFFF
 setcolor cityname|#775555
 setcolor mark1|Green
 setcolor mark2|Yellow
+setcolor sun|#FF0000
 shading 4
 sun
 tropics
