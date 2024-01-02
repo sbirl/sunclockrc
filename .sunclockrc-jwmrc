@@ -36,6 +36,9 @@ setcolor mapstripbg|White
 setcolor mark1|green
 setcolor root|Black
 setcolor star|Black
+### Looking for fonts? Execute: xfontsel -or- xlsfonts -- not fc-list or font-manager
+setfont coord|lucidasanstypewriter-bold-12
+setfont mapstrip|-*-times-bold-r-*-*-12-*-*-*-*-*-*-*
 #screensaver
 shading 4
 sun
