@@ -1,6 +1,6 @@
 ###
 ### created: 2020-Jan-03
-### updated: 2024-Jan-01  Happy New Year!
+### updated: 2024-Jan-09
 ###
 ### man sunclock
 ###
@@ -9,25 +9,39 @@
 ###
 ###=================================================================
 ###
-aspect 0
-bottomline
+#addcity 1|*|0.000|0.000|UTC
+#animation
+#aspect 1
+#bottomline
 #city Philadelphia
-citymode 0
+citymode 1
 classname sunclock-mini
 colorlevel 3
-darkness 0.85
+colorscale 32
+darkness 0.75
+decimal
 fillmode 2
 #fixedrootpos
 language: en
 map
 mapgeom 450x225
-mapmode E
+#mapmode E
 meridianmode 3
 ### meridianspacing is not working for values higher than 30
 #meridianspacing 90
 moon
+objectmode 1
 parallelmode 0
 position 39.960|-75.170
+removecity Beijing
+removecity Bombay
+removecity Cairo
+removecity Calcutta
+#removecity London
+removecity London|51.508|-0.183
+removecity Moscow
+removecity Sydney
+#removecity Tokyo
 ### Lower right: rootdx of 1 and rootdy of 0.9
 #rootdx 1.00
 #rootdy 0.90
