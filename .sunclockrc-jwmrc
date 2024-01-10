@@ -1,6 +1,6 @@
 ###
 ### created: 2020-Jan-03
-### updated: 2024-Jan-09
+### updated: 2024-Jan-10
 ###
 ### man sunclock
 ###
@@ -9,53 +9,95 @@
 ###
 ###=================================================================
 ###
+### Shorten city names and different (valid) timezone examples.
 #addcity 1|*|0.000|0.000|UTC
+addcity 1|DC|38.904|-77.016|EST5EDT
+addcity 1|LA|34.054|-118.241|PST8PDT
+addcity 1|NY|40.712|-74.006|America/New_York
+addcity 1|Philly|39.960|-75.170|US/Eastern
+addcity 1|東京|35.683|139.733|Asia/Tokyo
+### Quickly animate the position of the sun/moon throughout the day
 #animation
+### Aspect affects zoom, which I dont use in this display.
 #aspect 1
 #bottomline
-#city Philadelphia
-citymode 1
+### Select this city.  Uses city1 color.
+city Philly
+### Show cities with names.
+citymode 2
+### Override the default WM_CLASS for my Window Manager.
 classname sunclock-mini
 colorlevel 3
+### Use smoother color blending; up from the default 16.
 colorscale 32
+### Make the shaded nighttime pretty dark, but not too dark.
 darkness 0.75
+### Use 'decimal' notation instead of 'dms' (degree minute second) for coordinates.
 decimal
+### Fill in everything with color
 fillmode 2
+### Rather use the Window Manager to position the map.
 #fixedrootpos
 language: en
 map
 mapgeom 450x225
 #mapmode E
+### Show me the longitude degree numbers at the top of the map.
 meridianmode 3
 ### meridianspacing is not working for values higher than 30
 #meridianspacing 90
+### Show position of the moon.
 moon
+### Show me where the sun and moon are.
 objectmode 1
+### Dont display the latitude degree numbers
 parallelmode 0
-position 39.960|-75.170
+### My little green mark1.  Overrides City above.
+#position 39.960|-75.170
+### Hide select single-name cities.
 removecity Beijing
 removecity Bombay
 removecity Cairo
 removecity Calcutta
-#removecity London
-removecity London|51.508|-0.183
+#removecity London|51.508|-0.183
 removecity Moscow
-removecity Sydney
-#removecity Tokyo
-### Lower right: rootdx of 1 and rootdy of 0.9
+#removecity Sydney
+removecity Tokyo
+### Hiding select cities containing whitespace is a different matter
+### I found that replacing whitespace with (just about) any control
+### character (ASCII 1-8, 11-31) is required.  Not sure how to
+### inject control characters through nano/pico, but via vi/vim use
+### Control-V then Control-A (or Control-B, etc.) or use the digraph
+### menu.
+removecity LosAngeles
+removecity MexicoCity
+removecity NewDelhi
+removecity NewYork
+removecity SaoPaulo
+### Lower right of my desktop: rootdx of 1 and rootdy of 0.9
 #rootdx 1.00
 #rootdy 0.90
-rootperiod 120
+#rootperiod 120
+### Override default colors
+setcolor city0|yellow
+#setcolor city1|red
+setcolor cityname|white
 setcolor mapstripbg|White
 setcolor mark1|green
+setcolor moon|Black
 setcolor root|Black
 setcolor star|Black
-### Looking for fonts? Execute: xfontsel -or- xlsfonts -- not fc-list or font-manager
+### Looking for appropriate fonts?
+### Execute: xfontsel -or- xlsfonts -- not fc-list or font-manager
 setfont coord|lucidasanstypewriter-bold-12
 setfont mapstrip|-*-times-bold-r-*-*-12-*-*-*-*-*-*-*
+### I dont like how screensaver behaves.
 #screensaver
+### I like this shading scheme the best.
 shading 4
+### Show position of the sun.
 sun
+### Show the Artic and Tropic lines.
 tropics
 vmfflags 2
 ###=================================================================
