@@ -1,42 +1,50 @@
 ### ~/.sunclockrc on latest Debian
 ###
 ### created: 2020-Jan-03
-### updated: 2024-Jan-01  Happy New Year!
+### updated: 2024-Jan-10
 ###
 ### man sunclock
 ###
 ###=================================================================
 ### The more common settings are up top here.
-addcity 2|----------You_are_here|39.960|-75.170|US/Eastern
-addcity 2|----------You_should_be_here|20.700|-156.400|US/Hawaiian
+#addcity 2|Philly|39.960|-75.170|US/Eastern
+#addcity 2|----------You_are_here|39.960|-75.170|US/Eastern
+#addcity 2|----------You_should_be_here|20.700|-156.400|US/Hawaiian
 ###
-aspect 1
+#animation
+#aspect 1
 bottomline
-### city works from commandline but not rc.  Why?
-#city Philadelphia
+### city works in the not rc, when used with 'addcity'.
+city Philadelphia
+city Philly
 citycategories 5
-#citycheck
-citymode 1
+citymode 2
+classname sunclock-full
+clock
 clockgeom 400x200+100+775
 colorlevel 3
+colorscale 32
 #dateformat %H:%M%_%a%_%d%_%b%_%y|%H:%M:%S%_%Z|%a%_%j/%t%_%U/52
 darkness 0.85
+decimal
 fillmode 2
 language: en
-mapmode E
+#mapmode E
 mapgeom 1200x600
 meridianmode 3
 meridianspacing 75
 moon
-noanimation
-noscreensaver
+#noanimation
+#noscreensaver
 parallelmode 0
-position 39.960|-75.170
+#position 39.960|-75.170
+objectmode 1
 setcolor city1|#00FFFF
 setcolor cityname|#775555
 setcolor mark1|Green
 setcolor mark2|Yellow
 setcolor sun|#FF0000
+setfont mapstrip|-*-times-bold-r-*-*-24-*-*-*-*-*-*-*
 shading 4
 sun
 tropics
@@ -67,7 +75,7 @@ nomenu
 nooption
 #noselector
 nourban
-zoom
+nozoom
 ###=================================================================
 ###
 #EOF
