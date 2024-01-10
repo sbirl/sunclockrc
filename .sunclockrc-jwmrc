@@ -10,12 +10,16 @@
 ###=================================================================
 ###
 ### Shorten city names and different (valid) timezone examples.
+### Oh ... no support to display Japanese characters. :(
 #addcity 1|*|0.000|0.000|UTC
-addcity 1|DC|38.904|-77.016|EST5EDT
+#addcity 1|AK|61.400|-150.102|America/Anchorage
+#addcity 1|DC|38.904|-77.016|EST5EDT
+#addcity 1|HI|21.309|-157.859|America/Honolulu
 addcity 1|LA|34.054|-118.241|PST8PDT
-addcity 1|NY|40.712|-74.006|America/New_York
+#addcity 1|NY|40.712|-74.006|America/New_York
+#addcity 1|NZ|-36.857|174.768|Pacific/Auckland
 addcity 1|Philly|39.960|-75.170|US/Eastern
-addcity 1|東京|35.683|139.733|Asia/Tokyo
+#addcity 1|東京|35.683|139.733|Asia/Tokyo
 ### Quickly animate the position of the sun/moon throughout the day
 #animation
 ### Aspect affects zoom, which I dont use in this display.
@@ -62,7 +66,7 @@ removecity Calcutta
 #removecity London|51.508|-0.183
 removecity Moscow
 #removecity Sydney
-removecity Tokyo
+#removecity Tokyo
 ### Hiding select cities containing whitespace is a different matter
 ### I found that replacing whitespace with (just about) any control
 ### character (ASCII 1-8, 11-31) is required.  Not sure how to
