@@ -7,6 +7,45 @@
 ### This config file is for when I execute sunclock as a
 ### "screensaver", though I liken it more to Live Wallpaper.
 ###
+### ---
+### Key   Function
+###  1    Resets the zoom.
+###  a    Time travel 1 minute into the future.
+###  b    Time travel 1 minute into the past.
+###  c    Switch mapstrip to Coordinate Mode (Legal/Sunrise/Sunset times).
+###  d    Switch mapstrip to Distance Mode (between two marks).
+###  e    mapstrip displays hour for each timezone.
+###  f    Open Earth map (VMF) file.
+###  g    Display HELP window.
+###  h    Display HELP window.
+###  i
+###  j    Time travel to the present.
+###  k    Quits sunclock.
+###  l    Switch mapstrip to Legal Time Mode.
+###  m    Cycle through the 4 meridianmode.
+###  n    Cycle through all 5 shading modes.
+###  o    Displays OPTION window.
+###  p    Cycle through the 4 parallelmode.
+###  q    Quits sunclock.
+###  r
+###  s    Switch mapstrip to Solar Mode (Lati/Long, Solar Time, Day Length).
+###  t    Toggles on/off tropic lines.
+###  u    Display URBAN window.
+###  v
+###  w    Opens up a new map.
+###  x
+###  y    Cycle through objectmode
+###  z    Display ZOOM window
+###  =    Quits sunclock.
+###  !
+###  [    screensaver
+###  ]    screensaver (again?)
+###  >    Adjust map width to screen size.
+###  <    Revert to previous screen size (doesnt always work).
+###  "    Start/Stop animation.
+### PgUp  Scroll mapstrip text to left
+### PgDn  Scroll mapstrip text to rght
+###
 ###=================================================================
 ###
 ### Shorten city names and different (valid) timezone examples.
@@ -20,14 +59,17 @@ addcity 1|LA|34.054|-118.241|PST8PDT
 #addcity 1|NZ|-36.857|174.768|Pacific/Auckland
 addcity 1|Philly|39.960|-75.170|US/Eastern
 #addcity 1|東京|35.683|139.733|Asia/Tokyo
-### Quickly animate the position of the sun/moon throughout the day
+### Quickly animate the position of the sun/moon throughout the day.
+### Start/stop with ' (single quote).
 #animation
 ### Aspect affects zoom, which I dont use in this display.
 #aspect 1
 #bottomline
-### Select this city.  Uses city1 color.
+### Start map in Coordinate Mode and select this city. Uses city1 color.
+### Right-click-n-drag zooms in. + zoom in. - zoom out. '1' reset.
+### Mutually exclusive with 'position' option below.
 city Philly
-### Show cities with names.
+### Show cities with names. 'u' cycles through 3 modes.
 citymode 2
 ### Override the default WM_CLASS for my Window Manager.
 classname sunclock-mini
@@ -47,16 +89,20 @@ map
 mapgeom 450x225
 #mapmode E
 ### Show me the longitude degree numbers at the top of the map.
+### 'm' to cycle through all 4 modes.
 meridianmode 3
 ### meridianspacing is not working for values higher than 30
 #meridianspacing 90
 ### Show position of the moon.
 moon
-### Show me where the sun and moon are.
+### Show me where the sun and moon are. 'y' cycles through 3 modes.
 objectmode 1
-### Dont display the latitude degree numbers
+### Dont display the latitude degree numbers 'p' cycles through 4 modes.
 parallelmode 0
-### My little green mark1.  Overrides City above.
+### Start map in Solar Mode, focused on my little green mark1.
+### Mutually exclusive with 'city' option above.
+### Left-clicking repositions the mark and updates the mapstrip
+position 0.000|0.000
 #position 39.960|-75.170
 ### Hide select single-name cities.
 removecity Beijing
@@ -65,7 +111,7 @@ removecity Cairo
 removecity Calcutta
 #removecity London|51.508|-0.183
 removecity Moscow
-#removecity Sydney
+removecity Sydney
 #removecity Tokyo
 ### Hiding select cities containing whitespace is a different matter
 ### I found that replacing whitespace with (just about) any control
@@ -97,11 +143,11 @@ setfont coord|lucidasanstypewriter-bold-12
 setfont mapstrip|-*-times-bold-r-*-*-12-*-*-*-*-*-*-*
 ### I dont like how screensaver behaves.
 #screensaver
-### I like this shading scheme the best.
+### I like shading scheme 4 the best. 'n' to cycle through all 5.
 shading 4
 ### Show position of the sun.
 sun
-### Show the Artic and Tropic lines.
+### Show the Artic and Tropic lines. 't' toggles on/off.
 tropics
 vmfflags 2
 ###=================================================================
