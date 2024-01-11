@@ -1,0 +1,29 @@
+### ~/.sunclockrc on latest Debian
+###
+### created: 2024-Jan-10
+### updated: 2024-Jan-10
+###
+### man sunclock
+###
+###=================================================================
+bottomline
+command sunclock -rcfile ~/.sunclockrc
+classname sunclock-clock
+clock
+clockgeom 125x65
+dateformat %H:%M:%S%_%Y%b%d
+darkness 0.90
+fillmode 2
+language: en
+objectmode 1
+setcolor sun|#000000
+setfont mapstrip|-*-times-bold-r-*-*-24-*-*-*-*-*-*-*
+shading 4
+###
+nomenu
+nooption
+nourban
+nozoom
+###=================================================================
+###
+#EOF
