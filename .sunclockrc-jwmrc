@@ -16,8 +16,8 @@
 ###  d    Switch mapstrip to Distance Mode (between two marks).
 ###  e    mapstrip displays hour for each timezone.
 ###  f    Open Earth map (VMF) file.
-###  g    Display HELP window.
-###  h    Display HELP window.
+###  g    Display MENU window.
+###  h    Display MENU window.
 ###  i
 ###  j    Time travel to the present.
 ###  k    Quits sunclock.
@@ -62,6 +62,8 @@ addcity 1|Philly|39.960|-75.170|US/Eastern
 ### Quickly animate the position of the sun/moon throughout the day.
 ### Start/stop with ' (single quote).
 #animation
+### Update animation once every second
+#animateperiod 1
 ### Aspect affects zoom, which I dont use in this display.
 #aspect 1
 #bottomline
