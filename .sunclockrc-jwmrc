@@ -88,7 +88,7 @@ fillmode 2
 #fixedrootpos
 language: en
 map
-mapgeom 450x225
+mapgeom 425x235
 #mapmode E
 ### Show me the longitude degree numbers at the top of the map.
 ### 'm' to cycle through all 4 modes.
